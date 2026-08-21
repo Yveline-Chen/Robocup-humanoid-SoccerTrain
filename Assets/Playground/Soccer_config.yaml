@@ -1,0 +1,26 @@
+behaviors:
+  gewu:
+    init_path: D:/Unity_RL_Playground/Unity-RL-Playground-main/gewu/results/soccer_v2_cont3/gewu/gewu-3753726.pt
+    hyperparameters: {batch_size: 2048, beta: 0.001, beta_schedule: linear, buffer_size: 20480,
+      epsilon: 0.1, epsilon_schedule: linear, lambd: 0.95, learning_rate: 0.00003,
+      learning_rate_schedule: linear, num_epoch: 3}
+    keep_checkpoints: 30
+    max_steps: 60000000
+    network_settings: {deterministic: false, goal_conditioning_type: hyper, hidden_units: 512,
+      normalize: true, num_layers: 3, vis_encode_type: simple}
+    reward_signals:
+      extrinsic:
+        gamma: 0.999
+        network_settings: {deterministic: false, goal_conditioning_type: hyper, hidden_units: 128,
+          normalize: false, num_layers: 2, vis_encode_type: simple}
+        strength: 1.0
+    summary_freq: 20000
+    threaded: false
+    time_horizon: 2000
+    trainer_type: ppo
+env_settings:
+  env_path: null
+  env_args: null
+  base_port: 5005
+  num_envs: 1        
+  seed: -1  
